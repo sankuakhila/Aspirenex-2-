@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <nav>
+            <button onclick="showCreateQuiz()">Create Quiz</button>
+            <button onclick="showTakeQuiz()">Take Quiz</button>
+        </nav>
+
+        <div id="createQuiz" class="hidden">
+            <h2>Create Quiz</h2>
+            <form id="quizForm">
+                <input type="text" id="quizTitle" placeholder="Quiz Title" required>
+                <div id="questionsContainer"></div>
+                <button type="button" onclick="addQuestion()">Add Question</button>
+                <button type="submit">Save Quiz</button>
+            </form>
+        </div>
+
+        <div id="takeQuiz" class="hidden">
+            <h2>Available Quizzes</h2>
+            <div id="quizzesList"></div>
+            <div id="quizContainer" class="hidden"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
